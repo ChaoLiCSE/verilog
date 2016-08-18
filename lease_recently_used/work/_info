@@ -1,0 +1,56 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/proj/verilog/lease_recently_used
+vlease_recently_used_4_elmt
+Z1 DXx6 sv_std 3 std 0 22 WmjPaeP=7F5?QFXzJ>D[Q2
+!s110 1471512317
+!i10b 1
+!s100 07d;c=<EMQMbe8QeUP=Y;3
+I]]fch:YZU8E`TXjHjB@>73
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s105 lease_recently_used_4_elmt_sv_unit
+S1
+R0
+w1471512180
+8D:/proj/verilog/lease_recently_used/src/lease_recently_used_4_elmt.sv
+FD:/proj/verilog/lease_recently_used/src/lease_recently_used_4_elmt.sv
+L0 6
+Z3 OV;L;10.4d;61
+r1
+!s85 0
+31
+!s108 1471512317.000000
+!s107 D:/proj/verilog/lease_recently_used/src/lease_recently_used_4_elmt.sv|
+!s90 -reportprogress|300|-work|work|D:/proj/verilog/lease_recently_used/src/lease_recently_used_4_elmt.sv|
+!i113 1
+Z4 o-work work
+vlease_recently_used_4_elmt_tb
+R1
+!s110 1471512315
+!i10b 1
+!s100 ^nTO>mAW3SG4?UX8jjA513
+Ib6LU>^lF>Ra7o0@j]`V0J2
+R2
+!s105 lease_recently_used_4_elmt_tb_sv_unit
+S1
+R0
+w1471512308
+8D:/proj/verilog/lease_recently_used/src/tb/lease_recently_used_4_elmt_tb.sv
+FD:/proj/verilog/lease_recently_used/src/tb/lease_recently_used_4_elmt_tb.sv
+L0 3
+R3
+r1
+!s85 0
+31
+!s108 1471512314.000000
+!s107 D:/proj/verilog/lease_recently_used/src/tb/lease_recently_used_4_elmt_tb.sv|
+!s90 -reportprogress|300|-work|work|D:/proj/verilog/lease_recently_used/src/tb/lease_recently_used_4_elmt_tb.sv|
+!i113 1
+R4
