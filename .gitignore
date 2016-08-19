@@ -1,5 +1,7 @@
 *.wlf
 
+cache/prj/*
+
 /lease_recently/used/proj/db/*
 /lease_recently/used/proj/incremental_db/*
 /lease_recently/used/proj/output_files/*
