@@ -1,0 +1,7 @@
+*.wlf
+
+/lease_recently/used/proj/db/*
+/lease_recently/used/proj/incremental_db/*
+/lease_recently/used/proj/output_files/*
+
+/lease_recently_used/src/tb/work/*
