@@ -11,14 +11,14 @@ tmp
 
 # cache modules
 cache/direct_map/prj/*
-cache/direct_map/src/tb/*
+cache/direct_map/src/tb/work/*
 
 cache/fully_associative/prj/*
-cache/fully_associative/src/tb/*
+cache/fully_associative/src/tb/work/*
 
 cache/nway/prj/*
-cache/nway/src/tb/*
+cache/nway/src/tb/work/*
 
 # lru module 
 lru/prj/*
-lru/src/tb/*
+lru/src/tb/work/*

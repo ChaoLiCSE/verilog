@@ -1,2 +1,0 @@
-Info (10281): Verilog HDL Declaration information at FullyAssociative.sv(24): object "OFFSET" differs only in case from object "offset" in the same scope File: D:/Projects/verilog/cache/src/FullyAssociative.sv Line: 24
-Info (10281): Verilog HDL Declaration information at FullyAssociative.sv(25): object "TAG" differs only in case from object "tag" in the same scope File: D:/Projects/verilog/cache/src/FullyAssociative.sv Line: 25
