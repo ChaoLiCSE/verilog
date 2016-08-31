@@ -1,3 +1,24 @@
+# ModelSim specifics
 *.wlf
+*.mti
+*.mpf
 
-cache/prj/*
+# Quartus specifics
+*.bak
+
+# test directory
+tmp
+
+# cache modules
+cache/direct_map/prj/*
+cache/direct_map/src/tb/*
+
+cache/fully_associative/prj/*
+cache/fully_associative/src/tb/*
+
+cache/nway/prj/*
+cache/nway/src/tb/*
+
+# lru module 
+lru/prj/*
+lru/src/tb/*
