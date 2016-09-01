@@ -1,10 +1,10 @@
-/**
+/******************************************************************************
  *
  * Fully Associative Cache
  *
  *    C = ABS
- *       C = 32
- *       A = C/B = 32/4 = 8
+ *       C = 128
+ *       A = C/B = 128/4 = 32
  *       B = 4 bytes
  *       S = 1
  *
@@ -14,21 +14,25 @@
  *
  * 
  *       valid  dirty   tag             cache line
- *      +------+-------+---------------+------------------------------------+  
- *    0 |      |       |               |                                    |  
- *      +------+-------+---------------+------------------------------------+  
- *
+ *      +------+-------+---------------+--------------------------------------+  
+ *    0 |      |       |               |                                      |  
+ *      +------+-------+---------------+--------------------------------------+ 
+ *      \__________________________________   ________________________________/
+ *                                         \ /
+ *                                          |
+ *                                          |
+ *    A    0     1     2     3              v                 n-2   n-1    n 
+ *      +-----+-----+-----+-----+--------+-----+------------+-----+-----+-----+  
+ *      |     |     |     |     | . . . .|     |. . . . . . |     |     |     |  
+ *      +-----+-----+-----+-----+--------+-----+------------+-----+-----+-----+  
  *
  * Author: Chao (Jack) Li
  *
  *
- **/
-
-
-
+ *****************************************************************************/
 
 module FullyAssociative #(parameter WIDTH = 32
-                         ,parameter C = 32      // bytes
+                         ,parameter C = 128     // bytes
                          ,parameter B = 4       // bytes
                          ,parameter A = C/B     // n-way
                           //        S = 1       // 1 set
@@ -71,6 +75,7 @@ module FullyAssociative #(parameter WIDTH = 32
 
    reg [$clog2(A)-1:0] hit_index;
 
+   // compare each tag in parallel
    always_comb begin 
       hit_o     = 1'b0;
       hit_index = 1'b0;
@@ -82,15 +87,12 @@ module FullyAssociative #(parameter WIDTH = 32
          end
       end
    end
-
-
    
    reg [$clog2(A)-1:0] lru_index_i;
    reg [$clog2(A)-1:0] lru_index_o;
 
    wire lru_access_i;
    assign lru_access_i = ren_i & hit_o | wen_i;
-
 
    LRU #(.LENGTH(A)
         )
@@ -101,8 +103,10 @@ module FullyAssociative #(parameter WIDTH = 32
             ,.index_o(lru_index_o)
             );
 
-
-   assign data_o = cache[hit_index] << (offset*WIDTH);
+   // A = offset>>2       := get displace 0, 1, 2, 3,... etc
+   // B = 1<<$clog(WIDTH) := get size of word, 32, 64, 128, etc
+   // cache[hit_index] << A * B get n-th word in cacheline 
+   assign data_o = cache[hit_index] << ((offset>>2)*(1<<$clog2(WIDTH)));
 
    assign lru_index_i = rst ? 0
                             : ren_i ? hit_index 
@@ -120,6 +124,5 @@ module FullyAssociative #(parameter WIDTH = 32
          end
       end
    end // always_ff
-
 
 endmodule

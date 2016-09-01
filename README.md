@@ -2,7 +2,7 @@
 
 ### Cache
    - [x] Direct Mapped Cache
-   - [ ] Fully Associative Cache
+   - [x] Fully Associative Cache
    - [ ] N-Way Cache
 
 

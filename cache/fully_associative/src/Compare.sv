@@ -1,3 +1,12 @@
+/******************************************************************************
+ *
+ * Compare
+ *      Compares A and B, returns the larger of the two values
+ *
+ * Author: Chao (Jack) Li 
+ *
+ *****************************************************************************/
+ 
 module Compare #(parameter VALUE_WIDTH = 32
                 ,parameter INDEX_WIDTH = 32
                 )
